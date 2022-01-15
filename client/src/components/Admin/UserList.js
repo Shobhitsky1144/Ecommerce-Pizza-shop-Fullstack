@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AiFillDelete } from "react-icons/ai";
-import { Table } from "react-bootstrap";
-import { getAllUsers, deleteUser } from "../../redux/actions/userAction";
+import { Table, Button } from "react-bootstrap";
+import {
+  getAllUsers,
+  deleteUser,
+  ChangeUserType,
+} from "../../redux/actions/userAction";
 import Loader from "./../Loader";
 import Error from "./../Error";
 
@@ -25,6 +29,7 @@ const UserList = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Delete</th>
+            <th>User Type</th>
           </tr>
         </thead>
         <tbody>
@@ -41,6 +46,23 @@ const UserList = () => {
                       dispatch(deleteUser(user._id));
                     }}
                   />
+                </td>
+                <td>
+                  {console.log("user", user)}{" "}
+                  {user.isAdmin ? (
+                    <h6 className="text-success">Admin</h6>
+                  ) : (
+                    <>
+                      <Button
+                        className="btn-danger"
+                        onClick={() => {
+                          dispatch(ChangeUserType(user._id));
+                        }}
+                      >
+                        Make Admin
+                      </Button>
+                    </>
+                  )}
                 </td>
               </tr>
             ))}

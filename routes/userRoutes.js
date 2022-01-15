@@ -85,4 +85,20 @@ router.post("/deleteuser", async (req, res) => {
   }
 });
 
+router.post("/changeusertype", async (req, res) => {
+  const userid = req.body.userid;
+  try {
+    const user = await User.findOne({ _id: userid });
+    {
+    }
+    user.isAdmin = true;
+    await user.save();
+    res.status(200).send("Changes success");
+  } catch (error) {
+    res.status(400).json({
+      message: "Something Went Wront",
+      error: error.stack,
+    });
+  }
+});
 module.exports = router;

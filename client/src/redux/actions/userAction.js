@@ -51,3 +51,14 @@ export const deleteUser = (userId) => async (dispatch) => {
     swal("Error While Deleting User");
   }
 };
+
+export const ChangeUserType = (userid) => async (dispatch) => {
+  try {
+    await axios.post("/api/users/changeusertype", { userid });
+    alert("Changes Success");
+
+    window.location.href = "/admin/userlist";
+  } catch (error) {
+    console.log(error);
+  }
+};
