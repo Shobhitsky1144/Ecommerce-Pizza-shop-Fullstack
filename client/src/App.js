@@ -18,7 +18,7 @@ function App() {
       <TopBar />
       <NavBar />
       <Switch>
-        <Route exact path="/home" component={HomeScreen} />
+        <Route exact path="/" component={HomeScreen} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/policy" component={Policy} />
