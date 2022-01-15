@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const path = require("path");
 require("colors");
 const importData = require("./Seeder");
-
+const port = process.env.PORT || 8080;
 //config dotenv
 dotenv.config();
 
@@ -37,7 +37,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(
     `Server Running On ${process.env.NODE_ENV} mode on port no ${process.env.PORT}`
