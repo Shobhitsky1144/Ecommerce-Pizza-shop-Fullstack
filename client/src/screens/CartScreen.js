@@ -71,7 +71,7 @@ const CartScreen = () => {
           </Row>
         </Col>
         <Col md={4}>
-          <h1>Payment info</h1>
+          <h1>Payment ggnfo</h1>
           <h4>Sub Total</h4>
           <h4>RS : {subTotal} /-</h4>
           <Checkout subTotal={subTotal} />
