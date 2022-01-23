@@ -1,4 +1,4 @@
-                          #PIZZA SHOP MERN STACK WEB APP
+                        #PIZZA SHOP MERN STACK WEB APP
                           
 Deploy Link-https://pizza-shop-mern-stack.herokuapp.com/
 
@@ -42,6 +42,6 @@ functionality- Admin Panel, stripe payment ,serach product,filter product catego
 
 3.in order section,admin can check all orders of users.
 
-4.admin can change order status deliver to delivered.
+4.admin can change order status deliver to delivered..
 
                     
