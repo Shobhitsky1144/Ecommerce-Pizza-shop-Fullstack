@@ -18,7 +18,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 
-//route
+//routes
 app.use("/api/pizzas", require("./routes/pizzaRoute"));
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/orders", require("./routes/orderRoute"));
