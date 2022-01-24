@@ -15,9 +15,7 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand>
             <Image
-//               src="images/logo.png"
-//     src="https://image.shutterstock.com/z/stock-vector-pizza-daily-fresh-vector-emblem-on-blackboard-pizza-logo-template-vector-emblem-for-cafe-1901059681.jpg"
-    src="https://cdn5.vectorstock.com/i/1000x1000/79/04/pizza-house-promotional-logo-with-cook-in-hat-vector-20847904.jpg"
+              src="images/logo.png"
               alt="logo"
               style={{ height: "50px" }}
             />
