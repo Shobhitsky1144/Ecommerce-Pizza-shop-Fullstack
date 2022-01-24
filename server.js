@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.get("/", (req, res) => {
-    res.send("<h1>Hello From Node Server vai nodemo</h1>");
+    res.send("Hello From Node Server");
   });
 }
 

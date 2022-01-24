@@ -14,7 +14,6 @@ router.get("/getAllPizzas", async (req, res) => {
 
 //ADD PIZZA || @POST REQUEST --ADMIN
 router.post("/addpizza", async (req, res) => {
-  console.log("pop", pizza);
   try {
     const newPizza = new pizzaModel({
       name: pizza.name,

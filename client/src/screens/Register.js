@@ -14,20 +14,18 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   const dispatch = useDispatch();
 
   const registerhandler = () => {
-    if (password !== confirmPassword) {
-      alert("Password do not match");
+    if (!email || !password) {
+      alert("Please fill the field");
     } else {
       const user = { name, email, password };
       dispatch(registerUser(user));
       setName("");
       setEmail("");
       setPassword("");
-      setConfirmPassword("");
     }
   };
   return (
@@ -67,15 +65,6 @@ const Register = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-            <Form.Label>Confrim Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Confirm Password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </Form.Group>
 
