@@ -4,7 +4,7 @@ const connectDb = require("./config/config");
 const Pizza = require("./models/pizzaModel");
 const Pizzas = require("./data/pizza-data");
 
-//config dot env and mongodb conn file
+//config dot env and mongodb con  file
 dotenv.config();
 connectDb();
 
