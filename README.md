@@ -1,6 +1,6 @@
                         #PIZZA SHOP MERN STACK WEB APP
                           
-Deploy Link-https://pizza-shop-mern-stack.herokuapp.com/
+Deploy Link-https://pizza-shop-mern-stack.herokuapp.com
 
 Frontend- Reactjs,redux
 
